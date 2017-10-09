@@ -16,8 +16,9 @@ message SimulatorConnection {
 }
 
 message SchedulerConnection {
-    map<string, float> initial_values = 1;
-    map<string, string> attribute_links = 2;
+    string simulation = 1;
+    map<string, float> initial_values = 2;
+    map<string, string> attribute_links = 3;
 }
 
 message AttributeMessage {
