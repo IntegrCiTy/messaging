@@ -2,12 +2,12 @@ syntax = "proto3";
 
 package backend.db;
 
-import "message/coside/coside.proto";
+import "backend/simulation.proto";
 
 message DataRequired {
     string id = 1;
     string node_name = 2;
-    coside.SimulationBlock block = 3;
+    simulation.SimulationBlock block = 3;
 }
 
 message HeatPump1Info {

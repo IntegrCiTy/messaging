@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package backend.coside;
+package backend.simulation;
 
 enum SimulationBlock {
     OTHER = 0;
