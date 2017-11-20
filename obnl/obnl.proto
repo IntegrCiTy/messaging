@@ -1,0 +1,33 @@
+syntax = "proto3";
+
+package obnl.common;
+
+message SystemInit {}
+
+message SimulatorConnection {
+    enum SimulationType {
+        OTHER = 0;
+        THERMAL = 1;
+        ELECTRICAL = 2;
+    }
+    SimulationType type = 1;
+}
+
+message SchedulerConnection {
+    string simulation = 1;
+    map<string, float> initial_values = 2;
+    map<string, string> attribute_links = 3;
+}
+
+message AttributeMessage {
+    float simulation_time = 1;
+    string attribute_name = 2;
+    float attribute_value = 3;
+}
+
+message NextStep {
+    float time_step = 1;
+    float current_time = 2;
+}
+
+message Quit {}

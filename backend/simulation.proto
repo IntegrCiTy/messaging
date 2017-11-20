@@ -1,0 +1,62 @@
+syntax = "proto3";
+
+package backend.coside;
+
+enum SimulationBlock {
+    OTHER = 0;
+    HEAT_PUMP_1 = 1;
+    HEAT_PUMP_2 = 2;
+    THERMAL_NETWORK = 3;
+    ELECTRICAL_NETWORK = 4;
+    STATIC = 5;
+}
+
+message SimulationModel {
+    enum SimulationModelType {
+        OTHER = 0;
+        SIMPLE_HP = 1;
+        COMPLEX_HP = 2;
+    }
+
+    SimulationBlock the_parent_block = 1;
+    SimulationModelType the_type = 2;
+    repeated string stored_data = 3;
+}
+
+message SimulationInit {
+    repeated NodeSimulation nodes = 1;
+    repeated LinkSimulation links = 2;
+}
+
+message NodeSimulation {
+    string name = 1;
+    SimulationBlock block = 2;
+    repeated string inputs = 3;
+    repeated string outputs = 4;
+}
+
+message LinkSimulation {
+    ConnectorSimulation input = 1;
+    ConnectorSimulation output = 2;
+}
+
+message ConnectorSimulation {
+    string node = 1;
+    string attribute = 2;
+}
+
+
+message Schedule {
+    string simulation_name = 1;
+    repeated Step schedule = 2;
+    repeated float steps = 3;
+}
+
+message Step {
+    repeated string node_names = 1;
+}
+
+
+message StartSimulation {
+
+}

@@ -1,0 +1,59 @@
+syntax = "proto3";
+
+package backend.db;
+
+import "message/coside/coside.proto";
+
+message DataRequired {
+    string id = 1;
+    string node_name = 2;
+    coside.SimulationBlock block = 3;
+}
+
+message HeatPump1Info {
+    string id = 1;
+    float t_in_cold = 2;
+    float t_in_hot = 3;
+    float t_set = 4;
+    float mflow_hs = 5;
+    float mflow_cs = 6;
+}
+
+message HeatPump2Info {
+    string id = 1;
+    float t_in_cold = 2;
+    float t_in_hot = 3;
+    float t_heat = 4;
+    float p_heat = 5;
+    float mflow_hs = 6;
+    float mflow_cs = 7;
+}
+
+message ThermalNetworkInfo {
+    float t_ret_cool = 1;
+    float t_ret_heat = 2;
+    float t_ret = 3;
+    float t_sup = 4;
+    float t_sup_cool = 5;
+    float t_sup_heat = 6;
+    float mflow_central = 7;
+    float mflow_heating = 8;
+    float mflow_cooling = 9;
+}
+
+message PowerNetworkInfo {
+    string id = 1;
+}
+
+message ConsumerInfo {
+    string id = 1;
+}
+
+message StoreData {
+    string simulation_id = 1;
+    string node_id = 2;
+    string attribute_name = 3;
+    float timestep = 4;
+    float value = 5;
+    string unit = 6;
+}
