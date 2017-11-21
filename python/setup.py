@@ -6,11 +6,12 @@ setup(name="ict-messaging",
       maintainer="The OBNL Team",
       maintainer_email="gillian.basso@hevs.ch",
       url="https://github.com/IntegrCiTy/messaging",
-      version="0.7.2",
+      version="0.7.3",
       platforms=[platform.platform()],  # TODO indicate really tested platforms
 
-      packages=find_packages(),
+      packages=["ict.protobuf", "ict.protobuf.backend", "ict.protobuf.obnl"],
       install_requires="protobuf",
+
 
       # metadata
 
