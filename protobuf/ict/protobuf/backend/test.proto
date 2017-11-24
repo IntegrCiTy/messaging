@@ -1,0 +1,8 @@
+syntax = "proto3";
+
+package backend.db;
+
+message TestNodeInfo {
+    string id = 1;
+    repeated float values = 2;
+}
