@@ -9,6 +9,9 @@ enum SimulationBlock {
     THERMAL_NETWORK = 3;
     ELECTRICAL_NETWORK = 4;
     STATIC = 5;
+    TEST_A = 1000;
+    TEST_B = 1001;
+    TEST_C = 1002;
 }
 
 message SimulationModel {

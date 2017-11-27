@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package backend.db;
+package backend.test;
 
 message TestNodeInfo {
     string id = 1;
