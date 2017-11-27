@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='ict/protobuf/backend/simulation.proto',
   package='backend.simulation',
   syntax='proto3',
-  serialized_pb=_b('\n%ict/protobuf/backend/simulation.proto\x12\x12\x62\x61\x63kend.simulation\"\xf1\x01\n\x0fSimulationModel\x12=\n\x10the_parent_block\x18\x01 \x01(\x0e\x32#.backend.simulation.SimulationBlock\x12I\n\x08the_type\x18\x02 \x01(\x0e\x32\x37.backend.simulation.SimulationModel.SimulationModelType\x12\x13\n\x0bstored_data\x18\x03 \x03(\t\"?\n\x13SimulationModelType\x12\t\n\x05OTHER\x10\x00\x12\r\n\tSIMPLE_HP\x10\x01\x12\x0e\n\nCOMPLEX_HP\x10\x02\"v\n\x0eSimulationInit\x12\x31\n\x05nodes\x18\x01 \x03(\x0b\x32\".backend.simulation.NodeSimulation\x12\x31\n\x05links\x18\x02 \x03(\x0b\x32\".backend.simulation.LinkSimulation\"s\n\x0eNodeSimulation\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x32\n\x05\x62lock\x18\x02 \x01(\x0e\x32#.backend.simulation.SimulationBlock\x12\x0e\n\x06inputs\x18\x03 \x03(\t\x12\x0f\n\x07outputs\x18\x04 \x03(\t\"\x81\x01\n\x0eLinkSimulation\x12\x36\n\x05input\x18\x01 \x01(\x0b\x32\'.backend.simulation.ConnectorSimulation\x12\x37\n\x06output\x18\x02 \x01(\x0b\x32\'.backend.simulation.ConnectorSimulation\"6\n\x13\x43onnectorSimulation\x12\x0c\n\x04node\x18\x01 \x01(\t\x12\x11\n\tattribute\x18\x02 \x01(\t\"^\n\x08Schedule\x12\x17\n\x0fsimulation_name\x18\x01 \x01(\t\x12*\n\x08schedule\x18\x02 \x03(\x0b\x32\x18.backend.simulation.Step\x12\r\n\x05steps\x18\x03 \x03(\x02\"\x1a\n\x04Step\x12\x12\n\nnode_names\x18\x01 \x03(\t\"\x11\n\x0fStartSimulation*\x9e\x01\n\x0fSimulationBlock\x12\t\n\x05OTHER\x10\x00\x12\x0f\n\x0bHEAT_PUMP_1\x10\x01\x12\x0f\n\x0bHEAT_PUMP_2\x10\x02\x12\x13\n\x0fTHERMAL_NETWORK\x10\x03\x12\x16\n\x12\x45LECTRICAL_NETWORK\x10\x04\x12\n\n\x06STATIC\x10\x05\x12\x0b\n\x06TEST_A\x10\xe8\x07\x12\x0b\n\x06TEST_B\x10\xe9\x07\x12\x0b\n\x06TEST_C\x10\xea\x07\x62\x06proto3')
+  serialized_pb=_b('\n%ict/protobuf/backend/simulation.proto\x12\x12\x62\x61\x63kend.simulation\"\xf1\x01\n\x0fSimulationModel\x12=\n\x10the_parent_block\x18\x01 \x01(\x0e\x32#.backend.simulation.SimulationBlock\x12I\n\x08the_type\x18\x02 \x01(\x0e\x32\x37.backend.simulation.SimulationModel.SimulationModelType\x12\x13\n\x0bstored_data\x18\x03 \x03(\t\"?\n\x13SimulationModelType\x12\t\n\x05OTHER\x10\x00\x12\r\n\tSIMPLE_HP\x10\x01\x12\x0e\n\nCOMPLEX_HP\x10\x02\"v\n\x0eSimulationInit\x12\x31\n\x05nodes\x18\x01 \x03(\x0b\x32\".backend.simulation.NodeSimulation\x12\x31\n\x05links\x18\x02 \x03(\x0b\x32\".backend.simulation.LinkSimulation\"s\n\x0eNodeSimulation\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x32\n\x05\x62lock\x18\x02 \x01(\x0e\x32#.backend.simulation.SimulationBlock\x12\x0e\n\x06inputs\x18\x03 \x03(\t\x12\x0f\n\x07outputs\x18\x04 \x03(\t\"\x81\x01\n\x0eLinkSimulation\x12\x36\n\x05input\x18\x01 \x01(\x0b\x32\'.backend.simulation.ConnectorSimulation\x12\x37\n\x06output\x18\x02 \x01(\x0b\x32\'.backend.simulation.ConnectorSimulation\"6\n\x13\x43onnectorSimulation\x12\x0c\n\x04node\x18\x01 \x01(\t\x12\x11\n\tattribute\x18\x02 \x01(\t\"^\n\x08Schedule\x12\x17\n\x0fsimulation_name\x18\x01 \x01(\t\x12*\n\x08schedule\x18\x02 \x03(\x0b\x32\x18.backend.simulation.Step\x12\r\n\x05steps\x18\x03 \x03(\x02\"\x1a\n\x04Step\x12\x12\n\nnode_names\x18\x01 \x03(\t\"\x11\n\x0fStartSimulation*\x9b\x01\n\x0fSimulationBlock\x12\t\n\x05OTHER\x10\x00\x12\x0f\n\x0bHEAT_PUMP_1\x10\x01\x12\x0f\n\x0bHEAT_PUMP_2\x10\x02\x12\x13\n\x0fTHERMAL_NETWORK\x10\x03\x12\x16\n\x12\x45LECTRICAL_NETWORK\x10\x04\x12\n\n\x06STATIC\x10\x05\x12\n\n\x06TEST_A\x10\x06\x12\n\n\x06TEST_B\x10\x07\x12\n\n\x06TEST_C\x10\x08\x62\x06proto3')
 )
 
 _SIMULATIONBLOCK = _descriptor.EnumDescriptor(
@@ -54,22 +54,22 @@ _SIMULATIONBLOCK = _descriptor.EnumDescriptor(
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='TEST_A', index=6, number=1000,
+      name='TEST_A', index=6, number=6,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='TEST_B', index=7, number=1001,
+      name='TEST_B', index=7, number=7,
       options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='TEST_C', index=8, number=1002,
+      name='TEST_C', index=8, number=8,
       options=None,
       type=None),
   ],
   containing_type=None,
   options=None,
   serialized_start=874,
-  serialized_end=1032,
+  serialized_end=1029,
 )
 _sym_db.RegisterEnumDescriptor(_SIMULATIONBLOCK)
 
@@ -80,9 +80,9 @@ HEAT_PUMP_2 = 2
 THERMAL_NETWORK = 3
 ELECTRICAL_NETWORK = 4
 STATIC = 5
-TEST_A = 1000
-TEST_B = 1001
-TEST_C = 1002
+TEST_A = 6
+TEST_B = 7
+TEST_C = 8
 
 
 _SIMULATIONMODEL_SIMULATIONMODELTYPE = _descriptor.EnumDescriptor(
