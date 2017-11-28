@@ -14,18 +14,6 @@ enum SimulationBlock {
     TEST_C = 8;
 }
 
-message SimulationModel {
-    enum SimulationModelType {
-        OTHER = 0;
-        SIMPLE_HP = 1;
-        COMPLEX_HP = 2;
-    }
-
-    SimulationBlock the_parent_block = 1;
-    SimulationModelType the_type = 2;
-    repeated string stored_data = 3;
-}
-
 message SimulationInit {
     repeated NodeSimulation nodes = 1;
     repeated LinkSimulation links = 2;

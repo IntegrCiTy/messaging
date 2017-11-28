@@ -20,49 +20,11 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='ict/protobuf/core.proto',
   package='backend.common',
   syntax='proto3',
-  serialized_pb=_b('\n\x1aict/protobuf/core.proto\x12\x0e\x62\x61\x63kend.common\x1a\x19google/protobuf/any.proto\"\xd8\x01\n\x0bMetaMessage\x12\x11\n\tnode_name\x18\x01 \x01(\t\x12\x35\n\x04type\x18\x02 \x01(\x0e\x32\'.backend.common.MetaMessage.MessageType\x12%\n\x07\x64\x65tails\x18\x04 \x01(\x0b\x32\x14.google.protobuf.Any\"X\n\x0bMessageType\x12\x08\n\x04STEP\x10\x00\x12\x08\n\x04INIT\x10\x01\x12\x0c\n\x08UPDATE_X\x10\x02\x12\x0c\n\x08UPDATE_Y\x10\x03\x12\r\n\tATTRIBUTE\x10\x04\x12\n\n\x06\x41NSWER\x10\x05\"\x06\n\x04Quitb\x06proto3')
+  serialized_pb=_b('\n\x17ict/protobuf/core.proto\x12\x0e\x62\x61\x63kend.common\x1a\x19google/protobuf/any.proto\"G\n\x0bMetaMessage\x12\x11\n\tnode_name\x18\x01 \x01(\t\x12%\n\x07\x64\x65tails\x18\x04 \x01(\x0b\x32\x14.google.protobuf.Any\"\x06\n\x04Quitb\x06proto3')
   ,
   dependencies=[google_dot_protobuf_dot_any__pb2.DESCRIPTOR,])
 
 
-
-_METAMESSAGE_MESSAGETYPE = _descriptor.EnumDescriptor(
-  name='MessageType',
-  full_name='backend.common.MetaMessage.MessageType',
-  filename=None,
-  file=DESCRIPTOR,
-  values=[
-    _descriptor.EnumValueDescriptor(
-      name='STEP', index=0, number=0,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='INIT', index=1, number=1,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='UPDATE_X', index=2, number=2,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='UPDATE_Y', index=3, number=3,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='ATTRIBUTE', index=4, number=4,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='ANSWER', index=5, number=5,
-      options=None,
-      type=None),
-  ],
-  containing_type=None,
-  options=None,
-  serialized_start=202,
-  serialized_end=290,
-)
-_sym_db.RegisterEnumDescriptor(_METAMESSAGE_MESSAGETYPE)
 
 
 _METAMESSAGE = _descriptor.Descriptor(
@@ -80,14 +42,7 @@ _METAMESSAGE = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='type', full_name='backend.common.MetaMessage.type', index=1,
-      number=2, type=14, cpp_type=8, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='details', full_name='backend.common.MetaMessage.details', index=2,
+      name='details', full_name='backend.common.MetaMessage.details', index=1,
       number=4, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -98,7 +53,6 @@ _METAMESSAGE = _descriptor.Descriptor(
   ],
   nested_types=[],
   enum_types=[
-    _METAMESSAGE_MESSAGETYPE,
   ],
   options=None,
   is_extendable=False,
@@ -106,8 +60,8 @@ _METAMESSAGE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=74,
-  serialized_end=290,
+  serialized_start=70,
+  serialized_end=141,
 )
 
 
@@ -130,27 +84,25 @@ _QUIT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=292,
-  serialized_end=298,
+  serialized_start=143,
+  serialized_end=149,
 )
 
-_METAMESSAGE.fields_by_name['type'].enum_type = _METAMESSAGE_MESSAGETYPE
 _METAMESSAGE.fields_by_name['details'].message_type = google_dot_protobuf_dot_any__pb2._ANY
-_METAMESSAGE_MESSAGETYPE.containing_type = _METAMESSAGE
 DESCRIPTOR.message_types_by_name['MetaMessage'] = _METAMESSAGE
 DESCRIPTOR.message_types_by_name['Quit'] = _QUIT
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 MetaMessage = _reflection.GeneratedProtocolMessageType('MetaMessage', (_message.Message,), dict(
   DESCRIPTOR = _METAMESSAGE,
-  __module__ = 'ict.protobuf.default_pb2'
+  __module__ = 'ict.protobuf.core_pb2'
   # @@protoc_insertion_point(class_scope:backend.common.MetaMessage)
   ))
 _sym_db.RegisterMessage(MetaMessage)
 
 Quit = _reflection.GeneratedProtocolMessageType('Quit', (_message.Message,), dict(
   DESCRIPTOR = _QUIT,
-  __module__ = 'ict.protobuf.default_pb2'
+  __module__ = 'ict.protobuf.core_pb2'
   # @@protoc_insertion_point(class_scope:backend.common.Quit)
   ))
 _sym_db.RegisterMessage(Quit)

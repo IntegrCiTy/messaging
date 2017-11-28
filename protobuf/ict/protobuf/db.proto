@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+package backend.db;
+
+import "ict/protobuf/simulation.proto";
+
+message DataRequired {
+    string id = 1;
+    simulation.SimulationBlock block = 2;
+    repeated string stored_data = 3;
+}
+
+message InitInfo {
+    string id = 1;
+    map<string, float> data_values = 2;
+}
+
+message StoreData {
+    string simulation_id = 1;
+    string node_id = 2;
+    string attribute_name = 3;
+    float timestep = 4;
+    float value = 5;
+    string unit = 6;
+}
