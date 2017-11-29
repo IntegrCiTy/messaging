@@ -4,14 +4,16 @@ package backend.simulation;
 
 enum SimulationBlock {
     OTHER = 0;
-    HEAT_PUMP_1 = 1;
-    HEAT_PUMP_2 = 2;
-    THERMAL_NETWORK = 3;
-    ELECTRICAL_NETWORK = 4;
-    STATIC = 5;
-    TEST_A = 6;
-    TEST_B = 7;
-    TEST_C = 8;
+    TEST_A = 1;
+    TEST_B = 2;
+    TEST_C = 3;
+    PROFILE = 4;
+    STORAGE = 5;
+    HEAT_PUMP = 6;
+    HYSTERESIS = 7;
+    EFFICIENCY = 8;
+    THERMAL_NETWORK = 9;
+    FEED_NETWORK = 10;
 }
 
 message SimulationInit {
