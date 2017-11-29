@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='ict/protobuf/db.proto',
   package='backend.db',
   syntax='proto3',
-  serialized_pb=_b('\n\x15ict/protobuf/db.proto\x12\nbackend.db\x1a\x1dict/protobuf/simulation.proto\"c\n\x0c\x44\x61taRequired\x12\n\n\x02id\x18\x01 \x01(\t\x12\x32\n\x05\x62lock\x18\x02 \x01(\x0e\x32#.backend.simulation.SimulationBlock\x12\x13\n\x0bstored_data\x18\x03 \x03(\t\"\xf8\x01\n\x08InitInfo\x12\n\n\x02id\x18\x01 \x01(\t\x12\x39\n\x0b\x64\x61ta_values\x18\x02 \x03(\x0b\x32$.backend.db.InitInfo.DataValuesEntry\x12\x30\n\x06\x61rrays\x18\x03 \x03(\x0b\x32 .backend.db.InitInfo.ArraysEntry\x1a\x31\n\x0f\x44\x61taValuesEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\x02:\x02\x38\x01\x1a@\n\x0b\x41rraysEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12 \n\x05value\x18\x02 \x01(\x0b\x32\x11.backend.db.Array:\x02\x38\x01\"\x17\n\x05\x41rray\x12\x0e\n\x06values\x18\x01 \x03(\x02\"z\n\tStoreData\x12\x15\n\rsimulation_id\x18\x01 \x01(\t\x12\x0f\n\x07node_id\x18\x02 \x01(\t\x12\x16\n\x0e\x61ttribute_name\x18\x03 \x01(\t\x12\x10\n\x08timestep\x18\x04 \x01(\x02\x12\r\n\x05value\x18\x05 \x01(\x02\x12\x0c\n\x04unit\x18\x06 \x01(\tb\x06proto3')
+  serialized_pb=_b('\n\x15ict/protobuf/db.proto\x12\nbackend.db\x1a\x1dict/protobuf/simulation.proto\"c\n\x0c\x44\x61taRequired\x12\n\n\x02id\x18\x01 \x01(\t\x12\x32\n\x05\x62lock\x18\x02 \x01(\x0e\x32#.backend.simulation.SimulationBlock\x12\x13\n\x0bstored_data\x18\x03 \x03(\t\"\xe9\x02\n\x08InitInfo\x12\n\n\x02id\x18\x01 \x01(\t\x12\x39\n\x0b\x64\x61ta_values\x18\x02 \x03(\x0b\x32$.backend.db.InitInfo.DataValuesEntry\x12;\n\x0c\x64\x61ta_strings\x18\x03 \x03(\x0b\x32%.backend.db.InitInfo.DataStringsEntry\x12\x30\n\x06\x61rrays\x18\x04 \x03(\x0b\x32 .backend.db.InitInfo.ArraysEntry\x1a\x31\n\x0f\x44\x61taValuesEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\x02:\x02\x38\x01\x1a\x32\n\x10\x44\x61taStringsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\x1a@\n\x0b\x41rraysEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12 \n\x05value\x18\x02 \x01(\x0b\x32\x11.backend.db.Array:\x02\x38\x01\"(\n\x05\x41rray\x12\x0e\n\x06values\x18\x01 \x03(\x02\x12\x0f\n\x07strings\x18\x02 \x03(\t\"z\n\tStoreData\x12\x15\n\rsimulation_id\x18\x01 \x01(\t\x12\x0f\n\x07node_id\x18\x02 \x01(\t\x12\x16\n\x0e\x61ttribute_name\x18\x03 \x01(\t\x12\x10\n\x08timestep\x18\x04 \x01(\x02\x12\r\n\x05value\x18\x05 \x01(\x02\x12\x0c\n\x04unit\x18\x06 \x01(\tb\x06proto3')
   ,
   dependencies=[ict_dot_protobuf_dot_simulation__pb2.DESCRIPTOR,])
 
@@ -105,8 +105,45 @@ _INITINFO_DATAVALUESENTRY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=303,
-  serialized_end=352,
+  serialized_start=364,
+  serialized_end=413,
+)
+
+_INITINFO_DATASTRINGSENTRY = _descriptor.Descriptor(
+  name='DataStringsEntry',
+  full_name='backend.db.InitInfo.DataStringsEntry',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='key', full_name='backend.db.InitInfo.DataStringsEntry.key', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='value', full_name='backend.db.InitInfo.DataStringsEntry.value', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=_descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('8\001')),
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=415,
+  serialized_end=465,
 )
 
 _INITINFO_ARRAYSENTRY = _descriptor.Descriptor(
@@ -142,8 +179,8 @@ _INITINFO_ARRAYSENTRY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=354,
-  serialized_end=418,
+  serialized_start=467,
+  serialized_end=531,
 )
 
 _INITINFO = _descriptor.Descriptor(
@@ -168,8 +205,15 @@ _INITINFO = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='arrays', full_name='backend.db.InitInfo.arrays', index=2,
+      name='data_strings', full_name='backend.db.InitInfo.data_strings', index=2,
       number=3, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='arrays', full_name='backend.db.InitInfo.arrays', index=3,
+      number=4, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -177,7 +221,7 @@ _INITINFO = _descriptor.Descriptor(
   ],
   extensions=[
   ],
-  nested_types=[_INITINFO_DATAVALUESENTRY, _INITINFO_ARRAYSENTRY, ],
+  nested_types=[_INITINFO_DATAVALUESENTRY, _INITINFO_DATASTRINGSENTRY, _INITINFO_ARRAYSENTRY, ],
   enum_types=[
   ],
   options=None,
@@ -187,7 +231,7 @@ _INITINFO = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=170,
-  serialized_end=418,
+  serialized_end=531,
 )
 
 
@@ -205,6 +249,13 @@ _ARRAY = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='strings', full_name='backend.db.Array.strings', index=1,
+      number=2, type=9, cpp_type=9, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -217,8 +268,8 @@ _ARRAY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=420,
-  serialized_end=443,
+  serialized_start=533,
+  serialized_end=573,
 )
 
 
@@ -283,15 +334,17 @@ _STOREDATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=445,
-  serialized_end=567,
+  serialized_start=575,
+  serialized_end=697,
 )
 
 _DATAREQUIRED.fields_by_name['block'].enum_type = ict_dot_protobuf_dot_simulation__pb2._SIMULATIONBLOCK
 _INITINFO_DATAVALUESENTRY.containing_type = _INITINFO
+_INITINFO_DATASTRINGSENTRY.containing_type = _INITINFO
 _INITINFO_ARRAYSENTRY.fields_by_name['value'].message_type = _ARRAY
 _INITINFO_ARRAYSENTRY.containing_type = _INITINFO
 _INITINFO.fields_by_name['data_values'].message_type = _INITINFO_DATAVALUESENTRY
+_INITINFO.fields_by_name['data_strings'].message_type = _INITINFO_DATASTRINGSENTRY
 _INITINFO.fields_by_name['arrays'].message_type = _INITINFO_ARRAYSENTRY
 DESCRIPTOR.message_types_by_name['DataRequired'] = _DATAREQUIRED
 DESCRIPTOR.message_types_by_name['InitInfo'] = _INITINFO
@@ -315,6 +368,13 @@ InitInfo = _reflection.GeneratedProtocolMessageType('InitInfo', (_message.Messag
     ))
   ,
 
+  DataStringsEntry = _reflection.GeneratedProtocolMessageType('DataStringsEntry', (_message.Message,), dict(
+    DESCRIPTOR = _INITINFO_DATASTRINGSENTRY,
+    __module__ = 'ict.protobuf.db_pb2'
+    # @@protoc_insertion_point(class_scope:backend.db.InitInfo.DataStringsEntry)
+    ))
+  ,
+
   ArraysEntry = _reflection.GeneratedProtocolMessageType('ArraysEntry', (_message.Message,), dict(
     DESCRIPTOR = _INITINFO_ARRAYSENTRY,
     __module__ = 'ict.protobuf.db_pb2'
@@ -327,6 +387,7 @@ InitInfo = _reflection.GeneratedProtocolMessageType('InitInfo', (_message.Messag
   ))
 _sym_db.RegisterMessage(InitInfo)
 _sym_db.RegisterMessage(InitInfo.DataValuesEntry)
+_sym_db.RegisterMessage(InitInfo.DataStringsEntry)
 _sym_db.RegisterMessage(InitInfo.ArraysEntry)
 
 Array = _reflection.GeneratedProtocolMessageType('Array', (_message.Message,), dict(
@@ -346,6 +407,8 @@ _sym_db.RegisterMessage(StoreData)
 
 _INITINFO_DATAVALUESENTRY.has_options = True
 _INITINFO_DATAVALUESENTRY._options = _descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('8\001'))
+_INITINFO_DATASTRINGSENTRY.has_options = True
+_INITINFO_DATASTRINGSENTRY._options = _descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('8\001'))
 _INITINFO_ARRAYSENTRY.has_options = True
 _INITINFO_ARRAYSENTRY._options = _descriptor._ParseOptions(descriptor_pb2.MessageOptions(), _b('8\001'))
 # @@protoc_insertion_point(module_scope)

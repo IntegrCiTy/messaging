@@ -13,11 +13,13 @@ message DataRequired {
 message InitInfo {
     string id = 1;
     map<string, float> data_values = 2;
-    map<string, Array> arrays = 3;
+    map<string, string> data_strings = 3;
+    map<string, Array> arrays = 4;
 }
 
 message Array {
     repeated float values = 1;
+    repeated string strings = 2;
 }
 
 message StoreData {
