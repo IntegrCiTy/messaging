@@ -2,20 +2,6 @@ syntax = "proto3";
 
 package backend.simulation;
 
-enum SimulationBlock {
-    OTHER = 0;
-    TEST_A = 1;
-    TEST_B = 2;
-    TEST_C = 3;
-    PROFILE = 4;
-    STORAGE = 5;
-    HEAT_PUMP = 6;
-    HYSTERESIS = 7;
-    EFFICIENCY = 8;
-    THERMAL_NETWORK = 9;
-    FEED_NETWORK = 10;
-}
-
 message SimulationInit {
     repeated NodeSimulation nodes = 1;
     repeated LinkSimulation links = 2;
@@ -23,7 +9,7 @@ message SimulationInit {
 
 message NodeSimulation {
     string name = 1;
-    SimulationBlock block = 2;
+    string block = 2;
     repeated string inputs = 3;
     repeated string outputs = 4;
 }

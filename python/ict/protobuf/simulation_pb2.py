@@ -3,7 +3,6 @@
 
 import sys
 _b=sys.version_info[0]<3 and (lambda x:x) or (lambda x:x.encode('latin1'))
-from google.protobuf.internal import enum_type_wrapper
 from google.protobuf import descriptor as _descriptor
 from google.protobuf import message as _message
 from google.protobuf import reflection as _reflection
@@ -20,79 +19,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='ict/protobuf/simulation.proto',
   package='backend.simulation',
   syntax='proto3',
-  serialized_pb=_b('\n\x1dict/protobuf/simulation.proto\x12\x12\x62\x61\x63kend.simulation\"v\n\x0eSimulationInit\x12\x31\n\x05nodes\x18\x01 \x03(\x0b\x32\".backend.simulation.NodeSimulation\x12\x31\n\x05links\x18\x02 \x03(\x0b\x32\".backend.simulation.LinkSimulation\"s\n\x0eNodeSimulation\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x32\n\x05\x62lock\x18\x02 \x01(\x0e\x32#.backend.simulation.SimulationBlock\x12\x0e\n\x06inputs\x18\x03 \x03(\t\x12\x0f\n\x07outputs\x18\x04 \x03(\t\"\x81\x01\n\x0eLinkSimulation\x12\x36\n\x05input\x18\x01 \x01(\x0b\x32\'.backend.simulation.ConnectorSimulation\x12\x37\n\x06output\x18\x02 \x01(\x0b\x32\'.backend.simulation.ConnectorSimulation\"6\n\x13\x43onnectorSimulation\x12\x0c\n\x04node\x18\x01 \x01(\t\x12\x11\n\tattribute\x18\x02 \x01(\t\"^\n\x08Schedule\x12\x17\n\x0fsimulation_name\x18\x01 \x01(\t\x12*\n\x08schedule\x18\x02 \x03(\x0b\x32\x18.backend.simulation.Step\x12\r\n\x05steps\x18\x03 \x03(\x02\"\x1a\n\x04Step\x12\x12\n\nnode_names\x18\x01 \x03(\t\"\x11\n\x0fStartSimulation*\xb0\x01\n\x0fSimulationBlock\x12\t\n\x05OTHER\x10\x00\x12\n\n\x06TEST_A\x10\x01\x12\n\n\x06TEST_B\x10\x02\x12\n\n\x06TEST_C\x10\x03\x12\x0b\n\x07PROFILE\x10\x04\x12\x0b\n\x07STORAGE\x10\x05\x12\r\n\tHEAT_PUMP\x10\x06\x12\x0e\n\nHYSTERESIS\x10\x07\x12\x0e\n\nEFFICIENCY\x10\x08\x12\x13\n\x0fTHERMAL_NETWORK\x10\t\x12\x10\n\x0c\x46\x45\x45\x44_NETWORK\x10\nb\x06proto3')
+  serialized_pb=_b('\n\x1dict/protobuf/simulation.proto\x12\x12\x62\x61\x63kend.simulation\"v\n\x0eSimulationInit\x12\x31\n\x05nodes\x18\x01 \x03(\x0b\x32\".backend.simulation.NodeSimulation\x12\x31\n\x05links\x18\x02 \x03(\x0b\x32\".backend.simulation.LinkSimulation\"N\n\x0eNodeSimulation\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05\x62lock\x18\x02 \x01(\t\x12\x0e\n\x06inputs\x18\x03 \x03(\t\x12\x0f\n\x07outputs\x18\x04 \x03(\t\"\x81\x01\n\x0eLinkSimulation\x12\x36\n\x05input\x18\x01 \x01(\x0b\x32\'.backend.simulation.ConnectorSimulation\x12\x37\n\x06output\x18\x02 \x01(\x0b\x32\'.backend.simulation.ConnectorSimulation\"6\n\x13\x43onnectorSimulation\x12\x0c\n\x04node\x18\x01 \x01(\t\x12\x11\n\tattribute\x18\x02 \x01(\t\"^\n\x08Schedule\x12\x17\n\x0fsimulation_name\x18\x01 \x01(\t\x12*\n\x08schedule\x18\x02 \x03(\x0b\x32\x18.backend.simulation.Step\x12\r\n\x05steps\x18\x03 \x03(\x02\"\x1a\n\x04Step\x12\x12\n\nnode_names\x18\x01 \x03(\t\"\x11\n\x0fStartSimulationb\x06proto3')
 )
 
-_SIMULATIONBLOCK = _descriptor.EnumDescriptor(
-  name='SimulationBlock',
-  full_name='backend.simulation.SimulationBlock',
-  filename=None,
-  file=DESCRIPTOR,
-  values=[
-    _descriptor.EnumValueDescriptor(
-      name='OTHER', index=0, number=0,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='TEST_A', index=1, number=1,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='TEST_B', index=2, number=2,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='TEST_C', index=3, number=3,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='PROFILE', index=4, number=4,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='STORAGE', index=5, number=5,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='HEAT_PUMP', index=6, number=6,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='HYSTERESIS', index=7, number=7,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='EFFICIENCY', index=8, number=8,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='THERMAL_NETWORK', index=9, number=9,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='FEED_NETWORK', index=10, number=10,
-      options=None,
-      type=None),
-  ],
-  containing_type=None,
-  options=None,
-  serialized_start=622,
-  serialized_end=798,
-)
-_sym_db.RegisterEnumDescriptor(_SIMULATIONBLOCK)
-
-SimulationBlock = enum_type_wrapper.EnumTypeWrapper(_SIMULATIONBLOCK)
-OTHER = 0
-TEST_A = 1
-TEST_B = 2
-TEST_C = 3
-PROFILE = 4
-STORAGE = 5
-HEAT_PUMP = 6
-HYSTERESIS = 7
-EFFICIENCY = 8
-THERMAL_NETWORK = 9
-FEED_NETWORK = 10
 
 
 
@@ -150,8 +79,8 @@ _NODESIMULATION = _descriptor.Descriptor(
       options=None),
     _descriptor.FieldDescriptor(
       name='block', full_name='backend.simulation.NodeSimulation.block', index=1,
-      number=2, type=14, cpp_type=8, label=1,
-      has_default_value=False, default_value=0,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -182,7 +111,7 @@ _NODESIMULATION = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=173,
-  serialized_end=288,
+  serialized_end=251,
 )
 
 
@@ -219,8 +148,8 @@ _LINKSIMULATION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=291,
-  serialized_end=420,
+  serialized_start=254,
+  serialized_end=383,
 )
 
 
@@ -257,8 +186,8 @@ _CONNECTORSIMULATION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=422,
-  serialized_end=476,
+  serialized_start=385,
+  serialized_end=439,
 )
 
 
@@ -302,8 +231,8 @@ _SCHEDULE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=478,
-  serialized_end=572,
+  serialized_start=441,
+  serialized_end=535,
 )
 
 
@@ -333,8 +262,8 @@ _STEP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=574,
-  serialized_end=600,
+  serialized_start=537,
+  serialized_end=563,
 )
 
 
@@ -357,13 +286,12 @@ _STARTSIMULATION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=602,
-  serialized_end=619,
+  serialized_start=565,
+  serialized_end=582,
 )
 
 _SIMULATIONINIT.fields_by_name['nodes'].message_type = _NODESIMULATION
 _SIMULATIONINIT.fields_by_name['links'].message_type = _LINKSIMULATION
-_NODESIMULATION.fields_by_name['block'].enum_type = _SIMULATIONBLOCK
 _LINKSIMULATION.fields_by_name['input'].message_type = _CONNECTORSIMULATION
 _LINKSIMULATION.fields_by_name['output'].message_type = _CONNECTORSIMULATION
 _SCHEDULE.fields_by_name['schedule'].message_type = _STEP
@@ -374,7 +302,6 @@ DESCRIPTOR.message_types_by_name['ConnectorSimulation'] = _CONNECTORSIMULATION
 DESCRIPTOR.message_types_by_name['Schedule'] = _SCHEDULE
 DESCRIPTOR.message_types_by_name['Step'] = _STEP
 DESCRIPTOR.message_types_by_name['StartSimulation'] = _STARTSIMULATION
-DESCRIPTOR.enum_types_by_name['SimulationBlock'] = _SIMULATIONBLOCK
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 SimulationInit = _reflection.GeneratedProtocolMessageType('SimulationInit', (_message.Message,), dict(

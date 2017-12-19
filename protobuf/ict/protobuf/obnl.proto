@@ -4,14 +4,7 @@ package obnl.common;
 
 message SystemInit {}
 
-message SimulatorConnection {
-    enum SimulationType {
-        OTHER = 0;
-        THERMAL = 1;
-        ELECTRICAL = 2;
-    }
-    SimulationType type = 1;
-}
+message SimulatorConnection {}
 
 message SchedulerConnection {
     string simulation = 1;

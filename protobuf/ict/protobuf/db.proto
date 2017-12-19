@@ -2,11 +2,9 @@ syntax = "proto3";
 
 package backend.db;
 
-import "ict/protobuf/simulation.proto";
-
 message DataRequired {
     string id = 1;
-    simulation.SimulationBlock block = 2;
+    string block = 2;
     repeated string stored_data = 3;
 }
 

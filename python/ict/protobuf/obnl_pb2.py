@@ -19,36 +19,10 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='ict/protobuf/obnl.proto',
   package='obnl.common',
   syntax='proto3',
-  serialized_pb=_b('\n\x17ict/protobuf/obnl.proto\x12\x0bobnl.common\"\x0c\n\nSystemInit\"\x8e\x01\n\x13SimulatorConnection\x12=\n\x04type\x18\x01 \x01(\x0e\x32/.obnl.common.SimulatorConnection.SimulationType\"8\n\x0eSimulationType\x12\t\n\x05OTHER\x10\x00\x12\x0b\n\x07THERMAL\x10\x01\x12\x0e\n\nELECTRICAL\x10\x02\"\xb2\x02\n\x13SchedulerConnection\x12\x12\n\nsimulation\x18\x01 \x01(\t\x12K\n\x0einitial_values\x18\x02 \x03(\x0b\x32\x33.obnl.common.SchedulerConnection.InitialValuesEntry\x12M\n\x0f\x61ttribute_links\x18\x03 \x03(\x0b\x32\x34.obnl.common.SchedulerConnection.AttributeLinksEntry\x1a\x34\n\x12InitialValuesEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\x02:\x02\x38\x01\x1a\x35\n\x13\x41ttributeLinksEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\"\\\n\x10\x41ttributeMessage\x12\x17\n\x0fsimulation_time\x18\x01 \x01(\x02\x12\x16\n\x0e\x61ttribute_name\x18\x02 \x01(\t\x12\x17\n\x0f\x61ttribute_value\x18\x03 \x01(\x02\"3\n\x08NextStep\x12\x11\n\ttime_step\x18\x01 \x01(\x02\x12\x14\n\x0c\x63urrent_time\x18\x02 \x01(\x02\"\x06\n\x04Quitb\x06proto3')
+  serialized_pb=_b('\n\x17ict/protobuf/obnl.proto\x12\x0bobnl.common\"\x0c\n\nSystemInit\"\x15\n\x13SimulatorConnection\"\xb2\x02\n\x13SchedulerConnection\x12\x12\n\nsimulation\x18\x01 \x01(\t\x12K\n\x0einitial_values\x18\x02 \x03(\x0b\x32\x33.obnl.common.SchedulerConnection.InitialValuesEntry\x12M\n\x0f\x61ttribute_links\x18\x03 \x03(\x0b\x32\x34.obnl.common.SchedulerConnection.AttributeLinksEntry\x1a\x34\n\x12InitialValuesEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\x02:\x02\x38\x01\x1a\x35\n\x13\x41ttributeLinksEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\"\\\n\x10\x41ttributeMessage\x12\x17\n\x0fsimulation_time\x18\x01 \x01(\x02\x12\x16\n\x0e\x61ttribute_name\x18\x02 \x01(\t\x12\x17\n\x0f\x61ttribute_value\x18\x03 \x01(\x02\"3\n\x08NextStep\x12\x11\n\ttime_step\x18\x01 \x01(\x02\x12\x14\n\x0c\x63urrent_time\x18\x02 \x01(\x02\"\x06\n\x04Quitb\x06proto3')
 )
 
 
-
-_SIMULATORCONNECTION_SIMULATIONTYPE = _descriptor.EnumDescriptor(
-  name='SimulationType',
-  full_name='obnl.common.SimulatorConnection.SimulationType',
-  filename=None,
-  file=DESCRIPTOR,
-  values=[
-    _descriptor.EnumValueDescriptor(
-      name='OTHER', index=0, number=0,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='THERMAL', index=1, number=1,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='ELECTRICAL', index=2, number=2,
-      options=None,
-      type=None),
-  ],
-  containing_type=None,
-  options=None,
-  serialized_start=141,
-  serialized_end=197,
-)
-_sym_db.RegisterEnumDescriptor(_SIMULATORCONNECTION_SIMULATIONTYPE)
 
 
 _SYSTEMINIT = _descriptor.Descriptor(
@@ -82,19 +56,11 @@ _SIMULATORCONNECTION = _descriptor.Descriptor(
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
-    _descriptor.FieldDescriptor(
-      name='type', full_name='obnl.common.SimulatorConnection.type', index=0,
-      number=1, type=14, cpp_type=8, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
-    _SIMULATORCONNECTION_SIMULATIONTYPE,
   ],
   options=None,
   is_extendable=False,
@@ -102,8 +68,8 @@ _SIMULATORCONNECTION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=55,
-  serialized_end=197,
+  serialized_start=54,
+  serialized_end=75,
 )
 
 
@@ -140,8 +106,8 @@ _SCHEDULERCONNECTION_INITIALVALUESENTRY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=399,
-  serialized_end=451,
+  serialized_start=277,
+  serialized_end=329,
 )
 
 _SCHEDULERCONNECTION_ATTRIBUTELINKSENTRY = _descriptor.Descriptor(
@@ -177,8 +143,8 @@ _SCHEDULERCONNECTION_ATTRIBUTELINKSENTRY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=453,
-  serialized_end=506,
+  serialized_start=331,
+  serialized_end=384,
 )
 
 _SCHEDULERCONNECTION = _descriptor.Descriptor(
@@ -221,8 +187,8 @@ _SCHEDULERCONNECTION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=200,
-  serialized_end=506,
+  serialized_start=78,
+  serialized_end=384,
 )
 
 
@@ -266,8 +232,8 @@ _ATTRIBUTEMESSAGE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=508,
-  serialized_end=600,
+  serialized_start=386,
+  serialized_end=478,
 )
 
 
@@ -304,8 +270,8 @@ _NEXTSTEP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=602,
-  serialized_end=653,
+  serialized_start=480,
+  serialized_end=531,
 )
 
 
@@ -328,12 +294,10 @@ _QUIT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=655,
-  serialized_end=661,
+  serialized_start=533,
+  serialized_end=539,
 )
 
-_SIMULATORCONNECTION.fields_by_name['type'].enum_type = _SIMULATORCONNECTION_SIMULATIONTYPE
-_SIMULATORCONNECTION_SIMULATIONTYPE.containing_type = _SIMULATORCONNECTION
 _SCHEDULERCONNECTION_INITIALVALUESENTRY.containing_type = _SCHEDULERCONNECTION
 _SCHEDULERCONNECTION_ATTRIBUTELINKSENTRY.containing_type = _SCHEDULERCONNECTION
 _SCHEDULERCONNECTION.fields_by_name['initial_values'].message_type = _SCHEDULERCONNECTION_INITIALVALUESENTRY
